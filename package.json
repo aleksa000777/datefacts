@@ -1,0 +1,26 @@
+{
+  "name": "datefacts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksa000777/datefacts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksa000777/datefacts/issues"
+  },
+  "homepage": "https://github.com/aleksa000777/datefacts#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.3.7",
+    "morgan": "^1.6.1"
+  }
+}
