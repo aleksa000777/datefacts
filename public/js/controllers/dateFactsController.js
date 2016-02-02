@@ -7,7 +7,6 @@ function($scope, DateFactsApi,DateFactsApiSave,DateFactsApiAll){
     DateFactsApi.newDateFact($scope.newDate)
     .then(function(response){
       var data = response;
-      console.log(data,'data heeere');
       DateFactsApiSave.newDateFactSave(data);
       $scope.allDateFacts();
     });
@@ -15,13 +14,10 @@ function($scope, DateFactsApi,DateFactsApiSave,DateFactsApiAll){
 
   $scope.allDateFacts = function(){
     DateFactsApiAll.getAll().then(function(response){
-      console.log(response,'response in get all');
     var data = response.data.dateFacts;
     $scope.dateFacts = data;
-
-  })
-
+  });
 };
-$scope.allDateFacts();
 
+$scope.allDateFacts();
 }]);

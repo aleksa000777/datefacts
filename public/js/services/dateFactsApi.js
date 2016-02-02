@@ -5,6 +5,8 @@ api.factory('DateFactsApi', ['$http', function($http){
   var dateFactsInterface = {};
 
   dateFactsInterface.newDateFact = function(dateFatcData){
+    // dateFatcData.month = dateFatcData.month
+    console.log(dateFatcData.month, 'woooow');
     var FINAL_API_URL = "https://numbersapi.p.mashape.com/"+dateFatcData.month+"/"+dateFatcData.day+"/date?fragment=true&json=true"
     var configHeaders = {
       headers:{
@@ -12,6 +14,7 @@ api.factory('DateFactsApi', ['$http', function($http){
         "Accept": "text/plain"
       }
     };
+    
 
     return $http.get("https://numbersapi.p.mashape.com/"+dateFatcData.day+"/"+dateFatcData.month+"/date?fragment=true&json=true", configHeaders).then(function(output){
       var mergedObject = angular.extend(dateFatcData, output.data);
