@@ -15,7 +15,7 @@ var express    =   require('express'),
     // app.use(bodyParser.urlencoded({extended:true}));
     app.use(bodyParser.json());
     app.set('view engine', 'ejs');
-    mongoose.connect('mongodb://localhost/datefacts-02')
+    mongoose.connect('mongodb://localhost/datefacts-03')
 
     // routes
     var indexRouter = require('./routes/index');

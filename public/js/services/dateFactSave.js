@@ -5,6 +5,7 @@ rrr.factory('DateFactsApiSave', ['$http','DateFactsApi', function($http,DateFact
   var dateFactsInterfaceSave = {};
   dateFactsInterfaceSave.newDateFactSave = function(DateFactsApi){
     return $http.post(baseUrl, {dateFacts: DateFactsApi});
+
   };
   return dateFactsInterfaceSave;
 

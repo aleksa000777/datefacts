@@ -8,6 +8,10 @@
   <body>
     <h1>Date Facts!</h1>
 <section ng-controller="DateFactsController">
+<div class="today">
+    {{date | date:'yyyy-MM-dd'}}
+    {{todayFactData.text}}
+</div>
   <input type="text" ng-model="q" value="">
   <form ng-submit=newDateFact()>
     <input type="text" ng-model="newDate.day" placeholder="...day">
@@ -15,7 +19,16 @@
     <input type="submit" value="WOOOW">
   </form>
 
-<section ng-repeat="dateFact in dateFacts | filter:q ">
+  <!-- <div ng-repeat="dateFact in [dateFacts[dateFacts.length-1]] track by $index">
+    <ul>
+      <li>{{dateFact.day}} {{dateFact.month}} {{dateFact.year}}</li>
+      <li>{{dateFact.month}}   month</li>
+      <li>{{dateFact.day}}  day</li>
+      <li>{{dateFact.text}}</li>
+    </ul>
+  </div> -->
+
+<section ng-repeat="dateFact in dateFacts | filter:q | orderBy: '-created_at'">
   <ul>
     <li>{{dateFact.day}} {{dateFact.month}} {{dateFact.year}}</li>
     <li>{{dateFact.month}}   month</li>
