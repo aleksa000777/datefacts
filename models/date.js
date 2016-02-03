@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var DateFactSchema =  mongoose.Schema({
+  data: {type: String},
   day: {type: String},
   month: {type: String},
   text: {type: String},

@@ -5,14 +5,17 @@ function($scope, DateFactsApi,DateFactsApiSave,DateFactsApiAll){
 
   $scope.newDateFact = function(){
     console.log($scope.newDate, 'liiii');
+    $scope.newDate.month = $scope.newDate.month || '1'
     DateFactsApi.newDateFact($scope.newDate)
     .then(function(response){
       var data = response;
       DateFactsApiSave.newDateFactSave(data);
-      $scope.newDate={};
+      $scope.newDate={
+      };
       $scope.allDateFacts();
     });
   };
+
 
   $scope.allDateFacts = function(){
     DateFactsApiAll.getAll().then(function(response){
@@ -20,6 +23,7 @@ function($scope, DateFactsApi,DateFactsApiSave,DateFactsApiAll){
     $scope.dateFacts = data;
   });
 };
+
 
   $scope.date = new Date();
   var day = $scope.date.getDate().toString();
