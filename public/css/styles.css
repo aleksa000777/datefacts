@@ -1,21 +1,164 @@
 body{
-  background-color: lightblue;
+background-image: url('/img/bg2.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+height: 100%;
   margin: 0
+  box-sizing: border-box;
+  font-family: 'Handlee', cursive;
+}
+.container{
+  margin: 0 5%;
+  text-align: center;
+  left: 5%;
+}
+.ng-scope{
+  margin: 0 auto;
+  text-align: center;
 }
 .title{
-  position: relative;
+  position: fixed;
+  z-index: 9998;
+  opacity: 0.9;
+  /*position: relative;*/
   text-align: center;
-  background-color: lightgray;
-  margin-top: 0;
+  background-color: #5C6366;
+  margin-top: -1em;;
+  color: white;
+}
+h1{
+  margin-top: 15px;
+  text-shadow: 1px 1px white;
 }
 .search{
-  position: absolute;
-  top:90px;
-  left:90%;
+  z-index: 9999;
+  height: 50px;
+  position: fixed;
+  left: 80%
+  /*position: absolute;*/
+  /*top:10px;
+  margin-left:90%;*/
 }
 
-.box {
-  max-width: 600px;
-  background-color: white;
+div.box-big{
+  border-radius: 12%;
+  top: 100px;
   height: 300px;
+  background-image: url('/img/time.png');
+  background-size: cover;
+  /*background-color: lightgray;*/
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  padding: 40px;
 }
+
+div.box {
+position: absolute;
+border-radius: 15%;
+height: 150px;
+background-color: white;
+opacity: 0.8;
+margin: 0 auto;
+left: 5%;
+top: 8%;
+width: 90%;
+padding-top: 13px;
+text-align: center;
+}
+
+
+div.box-2{
+border-radius: 15%;
+top:200px;
+height: 100px;
+background-color: white;
+opacity: 0.8;
+position: absolute;
+left: 5%;
+width: 90%;
+margin-top: 20px;
+}
+
+form{
+  margin: 0;
+  padding-top: 5%;
+  padding-left: 15%;
+  width: 90%
+}
+
+.list-dates{
+  position: relative;
+  margin-top: 150px;
+  width: 100%;
+  text-align: center;
+}
+
+.card{
+  position: absolute;
+  margin-top: 10px;
+  width: 300px;
+  height: 100%
+}
+
+.card-section{
+  font-family: 'Alegreya Sans', sans-serif;
+  position: relative;
+  /*background-color: pink;*/
+  background-image: url('/img/cal-icon2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  box-shadow: 10px 10px 5px #888888;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+}
+.card-section:hover{
+  border: 5px solid rgb(69, 185, 220);;
+  margin: 5px;
+}
+.card ul{
+  display: block;
+  width: 200px;
+  padding: 10px;
+  list-style-type: none;
+}
+
+.check{
+  margin-top: 1px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.data{
+  margin-left: 18%;
+  margin-top: 5px;
+  color:white;
+  font-size: 1.2em;
+}
+.fact{
+  margin-left: 10%;
+  text-align: left;
+}
+
+.prompt{
+  font-size: 1.3em;
+}
+
+.today{
+  margin-top: -10px;
+  font-size: 1.1em;
+  font-family: 'Alegreya Sans', sans-serif;
+  padding: 5px;
+  text-shadow: 1px 1px #FF0000;
+}
+.today span{
+  font-size: 1.2em;
+
+}
+ .fact-title{
+   font-weight: bolder;
+   font-size: 1.2em;
+ }

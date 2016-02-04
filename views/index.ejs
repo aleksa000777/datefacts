@@ -11,41 +11,54 @@
     </div>
     <div class="container">
       <section ng-controller="DateFactsController">
-        <div class="row search">
-          <input type="text" ng-model="q" placeholder="...SEARCH">
+        <div class="search">
+          <input type="text" ng-model="q" placeholder="...SEARCH" class="form-search">
         </div>
-        <div class="row box twelve columns">
+        <div class="box-big">
+        <div class="box">
+          <div>
+            <span class="prompt">Do you know what is the day today?</span>
+          </div>
           <div class="today ">
-              {{date | date:'dd MMMM yyyy'}}
+              <span>{{date | date:'dd MMMM yyyy'}}</span> and...<br>
               {{todayFactData.text}}
           </div>
-        </div>
-        <form ng-submit=newDateFact()>
-          <input type="text" ng-model="newDate.day" placeholder="...day">
-          <!-- <input type="text" ng-model="newDate.month" placeholder="...month"> -->
-          <select ng-model="newDate.month">
-            <option ng-selected="true" value="1">January</option>
-            <option value="2">February</option>
-            <option value="3">March</option>
-            <option value="4">April</option>
-            <option value="5">May</option>
-            <option value="6">June</option>
-            <option value="7">July</option>
-            <option value="8">August</option>
-            <option value="9">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
-          </select>
-          <input type="submit" value="WOOOW" class="button button-primary">
-        </form>
+          <p class="check">Check out your dates to see more interesting facts</p>
 
-        <section ng-repeat="dateFact in dateFacts | filter:q | orderBy: '-created_at'">
-          <ul>
-            <li>Date: {{dateFact.data}} {{dateFact.year}}</li>
-            <li>Fact: {{dateFact.text}}</li>
-          </ul>
+        </div>
+        <div class="box-2">
+          <form ng-submit=newDateFact()>
+            <input type="text" ng-model="newDate.day" placeholder="...day">
+            <select ng-model="newDate.month">
+              <option ng-selected="true" value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <input type="submit" value="CHECK" class="button button-primary">
+          </form>
+        </div>
+
+      </div> <!--box-big -->
+
+        <div class="list-dates">
+        <section ng-repeat="dateFact in dateFacts | filter:q | orderBy: '-created_at'" class="card-section">
+          <div class="card">
+            <ul>
+              <a href="https://en.wikipedia.org/wiki/Special:Search?search={{dateFact.data}}+{{dateFact.year}}&go=Go" target="_blank"><li class="data"> {{dateFact.data}} {{dateFact.year}}</li></a>
+              <li class="fact"><span class="fact-title">Fact: </span>Fact: {{dateFact.text}}</li>
+            </ul>
+          </div>
         </section>
+        </div>
       </section>
     </div>
   </body>

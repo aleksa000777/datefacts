@@ -10,9 +10,9 @@ function($scope, DateFactsApi,DateFactsApiSave,DateFactsApiAll){
     .then(function(response){
       var data = response;
       DateFactsApiSave.newDateFactSave(data);
+      $scope.allDateFacts();
       $scope.newDate={
       };
-      $scope.allDateFacts();
     });
   };
 
@@ -43,4 +43,13 @@ $scope.todayDateFact();
 
 
 $scope.allDateFacts();
+
+
+
+
+
+
+
+
+
 }]);
