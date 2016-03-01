@@ -8,9 +8,7 @@ height: 100%;
   font-family: 'Handlee', cursive;
 }
 .container{
-  /*margin: 0 5%;*/
   text-align: center;
-  /*left: 5%;*/
 }
 .ng-scope{
   margin: 0 auto;
@@ -20,7 +18,6 @@ height: 100%;
   position: fixed;
   z-index: 9998;
   opacity: 0.9;
-  /*position: relative;*/
   text-align: center;
   background-color: #5C6366;
   margin-top: -1em;;
@@ -36,8 +33,7 @@ h1{
   position: fixed;
   left: 80%
   /*position: absolute;*/
-  /*top:10px;
-  margin-left:90%;*/
+
 }
 
 div.box-big{
@@ -46,7 +42,6 @@ div.box-big{
   height: 300px;
   background-image: url('/img/time.png');
   background-size: cover;
-  /*background-color: lightgray;*/
   width: 70%;
   margin: 0 auto;
   position: relative;
@@ -104,7 +99,6 @@ form{
 .card-section{
   font-family: 'Alegreya Sans', sans-serif;
   position: relative;
-  /*background-color: pink;*/
   background-image: url('/img/cal-icon2.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -152,7 +146,7 @@ form{
   font-size: 1.1em;
   font-family: 'Alegreya Sans', sans-serif;
   padding: 5px;
-  text-shadow: 1px 1px #FF0000;
+  text-shadow: 0.5px 0px #FF0000;
 }
 .today span{
   font-size: 1.2em;
