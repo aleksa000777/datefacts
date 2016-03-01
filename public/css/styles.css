@@ -8,9 +8,9 @@ height: 100%;
   font-family: 'Handlee', cursive;
 }
 .container{
-  margin: 0 5%;
+  /*margin: 0 5%;*/
   text-align: center;
-  left: 5%;
+  /*left: 5%;*/
 }
 .ng-scope{
   margin: 0 auto;
